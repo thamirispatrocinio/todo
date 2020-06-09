@@ -8,7 +8,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //Lista de tarefass
+  //Lista de tarefas
 l
   //Variavel publica chamada todos do tipo any que seria um tipo qualquer, que é um array[] e foi inicializada = com um array [] vazio
   public todos: Todo[] = [];
@@ -38,7 +38,7 @@ l
       done: false});
     
   }
-
+  //METODOS PARA TORNAR O PROJETO MAIS DINAMICO, OS PRINCIPAIS
   addTodo(){
     //this.form.value //o resultado vai ser o json que é {title: '' } , tras o valor do formulario
     const title = this.form.controls['title'].value;

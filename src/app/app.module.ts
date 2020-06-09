@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-@NgModule({
+@NgModule({//Metadatas, dados que são informações adicionais a classe
   declarations: [
     AppComponent
   ],
@@ -15,4 +15,4 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { }// modulo é uma classe decorada com @NgModule

@@ -19,7 +19,7 @@ l
   constructor(private fb: FormBuilder) {  //criacao de forms
     //para compor o formulario
     this.form = this.fb.group({//colocando os itens dentro do grupo
-      title: ['', Validators.compose([//array que compoe a validação
+      title: ['', Validators.compose([//array que compoe a validação | Validators.compose para ter mais de um validador
         Validators.minLength(3),
         Validators.maxLength(60),
         Validators.required,
@@ -43,12 +43,12 @@ l
     //this.form.value //o resultado vai ser o json que é {title: '' } , tras o valor do formulario
     const title = this.form.controls['title'].value;
     this.todos.push(new Todo(title, false));
-    this.form.reset();
+    this.form.reset();//para limpar o formulario
   }
 
   removeTodo(todo: Todo){//todo: Todo -> assim que tipa nos metodos
     const index = this.todos.indexOf(todo);//o metodo indexOF tras o indice do array do todo
-    this.todos.splice(index,1);//splice para remover item do array, 1 para ir removendo o item
+    this.todos.splice(index,1);//splice para remover item do array, 1 para ir removendo o item, estou dizendo que quero remover um indice a partir do de cima
   }
 
 }
